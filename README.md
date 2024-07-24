@@ -18,4 +18,6 @@ Lab7:linked list
 Lab8:String Hashing
 >Exam 2
 ## Lecture9:Tree and Graph
+Lab9:Graph and Tree
 ## Lecture10:Tree Traversal
+Lab10:Tree Traversal
