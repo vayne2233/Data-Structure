@@ -8,6 +8,7 @@ Lab3:Quick Sort
 ## Lecture4:Heap
 Lab4:Heap
 using priority_queue
+
 >Exam 1
 ## Lecture5:Stack and Queue
 Lab5:Stack & Queue
@@ -15,6 +16,7 @@ Lab5:Stack & Queue
 Lab6:Disjoint set
 ## Lecture7:Linked Lisk
 Lab7:linked list
+
 using list
 ## Lecture8:Hashing
 Lab8:String Hashing
