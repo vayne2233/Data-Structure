@@ -25,3 +25,6 @@ Lab8:String Hashing
 Lab9:Graph and Tree
 ## Lecture10:Tree Traversal
 Lab10:Tree Traversal
+
+## Lecture11:BST
+Lab11:BST Insert, Delete
