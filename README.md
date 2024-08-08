@@ -28,3 +28,6 @@ Lab10:Tree Traversal
 
 ## Lecture11:BST (7/29)
 Lab11:BST Insert, Delete
+
+## Lecture12:AVL Tree (1) (7/31)
+Lab12:AVL Insert
