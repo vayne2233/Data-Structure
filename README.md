@@ -31,3 +31,13 @@ Lab11:BST Insert, Delete
 
 ## Lecture12:AVL Tree (1) (7/31)
 Lab12:AVL Insert
+
+## Lecture13:AVL Tree (2) (8/02)
+Lab13:AVL Delete
+
+## Lecture14:DFS and BFS (8/05)
+Lab14:DFS and BFS
+
+## Lecture15:MST (8/07)
+Lab15:MST
+>Exam 3 up to AVL Tree (8/12)
