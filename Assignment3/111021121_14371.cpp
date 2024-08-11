@@ -4,22 +4,23 @@ using namespace std;
 
 struct node
 {
-    int key, bf, h, sz;
+    int key, bf, h, sz, lsz;
     node *l, *r, *pa;
 
     void update();
 
     node() {}
-    node(int _key) : key(_key), bf(0), h(0), sz(1), pa(NULL), l(NULL), r(NULL) {}
+    node(int _key) : key(_key), bf(0), h(0), sz(1), lsz(1), pa(NULL), l(NULL), r(NULL) {}
 } *root;
 
 void node::update()
 {
     int lh = (l ? l->h : -1);
     int rh = (r ? r->h : -1);
-    int lsz = (l ? l->sz : 0);
+    int tlsz = (l ? l->sz : 0);
     int rsz = (r ? r->sz : 0);
-    sz = lsz + rsz + 1;
+    sz = tlsz + rsz + 1;
+    lsz = tlsz + 1;
     h = max(lh, rh) + 1;
     bf = lh - rh;
 }
@@ -29,6 +30,36 @@ node *find_min(node *x)
     while (x->l)
         x = x->l;
     return x;
+}
+
+void find_kth(node *x, int k)
+{
+    if (!x)
+    {
+        cout << "-1\n";
+        return;
+    }
+    if (x->sz < k)
+    {
+        cout << "-1\n";
+        return;
+    }
+    if (x->lsz == k)
+    {
+        cout << x->key << "\n";
+        return;
+    }
+    else if (x->lsz > k)
+    {
+        x = x->l;
+        find_kth(x, k);
+    }
+    else if (x->lsz < k)
+    {
+        k -= x->lsz;
+        x = x->r;
+        find_kth(x, k);
+    }
 }
 
 void trans(node *x, node *y)
@@ -168,17 +199,6 @@ void del(node *x, int key)
     }
 }
 
-int order_of_key(node *x, int key)
-{
-    if (x == NULL)
-        return 0;
-    if (x->key <= key)
-    {
-        return 1 + (x->l ? x->l->sz : 0) + order_of_key(x->r, key);
-    }
-    return order_of_key(x->l, key);
-}
-
 int main()
 {
     ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
@@ -193,7 +213,7 @@ int main()
             insert(root, new node(x));
         else if (s == "DEL")
             del(root, x);
-        else if (s == "ORD")
-            cout << order_of_key(root, x) << "\n";
+        else if (s == "IND")
+            find_kth(root, x);
     }
 }
