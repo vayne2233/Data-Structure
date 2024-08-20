@@ -41,3 +41,12 @@ Lab14:DFS and BFS
 ## Lecture15:MST (8/07)
 Lab15:MST
 >Exam 3 up to AVL Tree (8/12)
+
+## Lecture16:SSSP (8/09)
+Lab16:SSSP
+
+## Lecture17:APSP (8/14)
+Lab17:APSP
+
+## Lecture18:Topological Sort and AOV Network (8/16)
+Lab18:Topological sort
