@@ -9,6 +9,10 @@
         "xstring": "cpp",
         "queue": "cpp",
         "type_traits": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "ios": "cpp",
+        "tuple": "cpp",
+        "iostream": "cpp",
+        "cstdlib": "cpp"
     }
 }
